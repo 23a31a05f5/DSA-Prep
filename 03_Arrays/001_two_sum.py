@@ -1,4 +1,4 @@
-
+"""
 nums=[5,6,7,8] 
 target=11
 
@@ -11,7 +11,7 @@ class Solution:
         return []
 r=Solution()
 ans=r.twoSum(nums,target)
-print(ans)
+print(ans)"""
 
 # #hashmap way more optimized
 # from typing import List
