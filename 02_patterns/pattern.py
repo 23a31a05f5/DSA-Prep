@@ -1,4 +1,4 @@
-"""# for any pattern follow these 3 points(no space)
+# for any pattern follow these 3 points(no space)
 #      1.find the no of lines(rows)
 #      2.find the no of columns somehow relate it with row
 #      3.print star or anything make it with row or column depend upon problem
@@ -213,7 +213,7 @@ pattern11(5)
 # 01
 # 101
 # 0101
-# 10101"""
+# 10101
 
 def pattern12(n):
         #star=2*(n-1)
