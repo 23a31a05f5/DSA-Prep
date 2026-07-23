@@ -287,7 +287,7 @@ pattern14(5)
 def pattern15(n):
         alp='A'
         for i in range(n):
-            for j in range((n-i+1)-1):
+            for j in range(n-i):
                 print(chr(65+j),end=" ")
 
             print()
@@ -300,7 +300,7 @@ pattern15(5)
 # A B 
 # A 
 
-def pattern14(n):
+def pattern16(n):
         alp='A'
         for i in range(n):
             for j in range(i+1):
@@ -308,7 +308,7 @@ def pattern14(n):
 
             print()
             
-pattern14(5)
+pattern16(5)
 
 # # o/p:
 # A 
@@ -316,3 +316,132 @@ pattern14(5)
 # C C C 
 # D D D D 
 # E E E E E 
+
+def pattern17(n):
+        
+        for i in range(n):
+            for j in  range(n-i-1):
+                print(" ",end="")
+            ch=ord('A')
+            bk=(2*i+1)//2
+            for j in range(2*i+1):
+                print(chr(ch),end="")
+                if j<bk:
+
+                    ch+=1
+                else:
+                    ch-=1
+            for j in  range(n-i-1):
+                print(" ",end="")
+            print()
+pattern17(5)
+# o/p:
+#     A    
+#    ABA   
+#   ABCBA  
+#  ABCDCBA 
+# ABCDEDCBA
+
+def pattern18(n):
+    for i in range(n):
+        ch = ord('A') + n - 1 - i
+        for j in range(i+1):
+            print(chr(ch),end="")
+            ch+=1
+        print()
+pattern18(5)
+# o/p:
+# E
+# DE
+# CDE
+# BCDE
+# ABCDE
+
+def pattern19(n):
+        for i in range(n):
+            for j in range(n-i):
+                print("*",end="")
+            for k in range(2*i):
+                print(" ",end="")
+            for j in range(n-i):
+                print("*",end="")
+            print()
+        space=2*n-2
+        for i in range(n):
+
+            for j in range(i+1):
+                print("*",end="")
+            for k in range(space):
+                print(" ",end="")
+            for j in range(i+1):
+                print("*",end="")
+            space-=2
+            print()
+pattern19(5)
+# o/p:
+# **********
+# ****  ****
+# ***    ***
+# **      **
+# *        *
+# *        *
+# **      **
+# ***    ***
+# ****  ****
+# **********
+
+#line this line patterns you split into two like symmetry or evne find condition and apply
+def pattern20(n):
+    space=2*n-2
+    for i in range(n):     
+        for j in range(i+1):
+            print("*",end="")
+        for k in range(space):
+            print(" ",end="")
+        for j in range(i+1):
+            print("*",end="")
+        space-=2
+        print()
+    space=2
+    for i in range(n-1):
+        for j in range(n-i-1):
+            print("*",end="")
+        for k in range(space):
+            print(" ",end="")
+        for j in range(n-i-1):
+            print("*",end="")
+        space+=2
+        print()
+pattern20(5)
+
+def pattern20(n):
+    spaces=2*n-2
+    for i in range(1,2*n-1+1):
+        star=i
+        if (i>n):
+            star=2*n-i
+        for j in range(1,star+1):
+            print("*",end="")
+        for k in range(1,spaces+1):
+            print(' ',end="")
+        for j in range(1,star+1):
+             print("*",end="")
+        print()
+        if i<n:
+            spaces-=2
+        else:
+            spaces+=2
+pattern20(5)
+# o/p;
+# *        *
+# **      **
+# ***    ***
+# ****  ****
+# **********
+# ****  ****
+# ***    ***
+# **      **
+# *        *
+        
+
+         
