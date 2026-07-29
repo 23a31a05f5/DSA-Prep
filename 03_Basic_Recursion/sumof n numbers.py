@@ -4,7 +4,8 @@ def sumn(i,sum):
         print(sum)
         return
     sumn(i-1,sum+i)
-sumn(3,0)   
+sumn(3,0) 
+  
 #functional
 def sumf(n):
     if n==0:
