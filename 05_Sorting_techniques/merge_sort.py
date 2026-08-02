@@ -22,12 +22,12 @@ def merge(arr,low,mid,high):
     return arr
 def ms(arr,low,high):
     if low>=high:
-        return
+        return 
     mid=(low+high)//2
     ms(arr,low,mid)
     ms(arr,mid+1,high)
-    merge(arr,low,mid,high)
-    return arr
+    return merge(arr,low,mid,high)
+    
 nums=[45,65,32,89,1]
 res=ms(nums,0,len(nums)-1)
 print(res)

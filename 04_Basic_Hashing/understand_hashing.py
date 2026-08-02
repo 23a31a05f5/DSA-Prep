@@ -110,8 +110,13 @@ for _ in range(t):
     ch = input("Enter char to fetch: ")
     print(freq.get(ch, 0))
 # o/p:
-# Enter string: abbcc
-# Testcases: 3
+# Enter string: hgafvabvfhaaa
+# Testcases: 4
+# Enter char to fetch: h
+# 2
 # Enter char to fetch: a
-# Enter char to fetch: b
+# 5
+# Enter char to fetch: f
+# 2
 # Enter char to fetch: z
+# 0
