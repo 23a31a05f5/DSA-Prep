@@ -1,6 +1,7 @@
 #Time complexity:O(n2)
 
 def selectionSort(nums):
+        n=len(nums)
         for i in range(n-1):
             minn=i
             for j in range(i,n):
