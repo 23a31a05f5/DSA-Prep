@@ -6,7 +6,6 @@ def removeDuplicates(nums):
         #     a.add(nums[i])
         return len(a)
 print(removeDuplicates([1,1,2,2,3,3]))
-
 #optimal:by taking another array
 #time complexity:O(n)
 def removeduplicates(arr):
@@ -19,9 +18,8 @@ def removeduplicates(arr):
         j+=1
     return len(temp)
 
-print(removeduplicates([1,1,2,2,3,4,5]))#[1,2,3,4,5]
+print(removeduplicates([1,1,2,2,3]))#[1,2,3,4,5]
 #o/p:5
-    
 #within the array 
 def removeduplicates(arr):
     i=0
