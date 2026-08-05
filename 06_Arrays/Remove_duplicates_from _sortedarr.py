@@ -9,16 +9,18 @@ print(removeDuplicates([1,1,2,2,3,3]))
 #optimal:by taking another array
 #time complexity:O(n)
 def removeduplicates(arr):
-    temp=[arr[0]]
-    i,j=arr[0],arr[1]
-    while j<=len(arr)-1:
-        if arr[j]!=arr[i]:
-            temp.append(arr[j])
-            i=j
-        j+=1
+    if not arr:
+         return 0
+    temp=[]
+    for i in arr:
+        if i not in temp:
+            temp.append(i)
     return len(temp)
+        
+         
 
-print(removeduplicates([1,1,2,2,3]))#[1,2,3,4,5]
+
+print(removeduplicates([1,2,3,2,4,5]))#[1,2,3,4,5]
 #o/p:5
 #within the array 
 def removeduplicates(arr):
