@@ -15,11 +15,8 @@ def removeduplicates(arr):
     for i in arr:
         if i not in temp:
             temp.append(i)
+    
     return len(temp)
-        
-         
-
-
 print(removeduplicates([1,2,3,2,4,5]))#[1,2,3,4,5]
 #o/p:5
 #within the array 
