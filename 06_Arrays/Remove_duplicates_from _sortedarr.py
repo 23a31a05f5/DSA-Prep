@@ -27,5 +27,15 @@ def removeduplicates(arr):
             arr[i+1]=arr[j]
             i+=1
     return i+1
-print(removeduplicates([1,1,2,2,2,3,3]))
+print(removeduplicates([1,1,2,2,3,3]))
 #o/p:3
+
+def removeduplicates(arr):
+    temp=[arr[0]]
+    i=0
+    for j in range(1,len(arr)):
+        if arr[j]!=arr[i]:
+            temp.append(arr[j])
+            i=j
+    return len(temp)
+print(removeduplicates([1,1,2,2,3,3]))

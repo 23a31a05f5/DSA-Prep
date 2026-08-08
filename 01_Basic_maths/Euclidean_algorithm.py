@@ -1,4 +1,4 @@
-#gcd(a,b)=dcs(a-b,b) where a>b
+#gcd(a,b)=gcd(a-b,b) where a>b
 #but here if there is big number it might be problem instead of subtracting with a-b 
 #you can put gcd(a%b,b) which results the same answer in few steps\
 def GCD(n1, n2):
