@@ -11,7 +11,6 @@ def selectionSort(nums):
             nums[i]=nums[minn]
             nums[minn]=temp
         return nums
-
 n=int(input())
 nums=list(map(int,input().split()))[:n]
 print(f"Selected sort is:{selectionSort(nums)}")
