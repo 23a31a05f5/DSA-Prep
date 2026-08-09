@@ -1,6 +1,5 @@
 #Time:O(n1logn+n2logn)+log(n1+n2)
 #space:O(n1+n2)+O(n1+n2)
-
 def unionArray( nums1, nums2):
     n1=set(nums1)
     n2={item for item in nums2}
@@ -43,3 +42,4 @@ arr1=[1,1,2,3,4,5]
 arr2=[1,3,4,6,7]
 print(unionsortedarry(arr1,arr2))
 #o/p:[1, 2, 3, 4, 5, 6, 7]
+#these are the basics of th eprogramming language
