@@ -115,7 +115,6 @@ def pattern8(n):
                 print(" ", end="")
             print()
 pattern8(5)
-
 # o/p:
 # *********
 #  ******* 
