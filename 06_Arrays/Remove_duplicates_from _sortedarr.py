@@ -35,7 +35,8 @@ def removeduplicates(arr):
     i=0
     for j in range(1,len(arr)):
         if arr[j]!=arr[i]:
-            temp.append(arr[j])
-            i=j
+            if arr[j] not in temp:
+                temp.append(arr[j])
+                i=j
     return len(temp)
-print(removeduplicates([1,1,2,2,3,3]))
+print(removeduplicates([1,1,2,2,1,3,3]))

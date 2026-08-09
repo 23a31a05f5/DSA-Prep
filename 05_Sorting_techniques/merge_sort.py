@@ -33,3 +33,4 @@ res=ms(nums,0,len(nums)-1)
 print(res)
 # o/p:
 # [1, 32, 45, 65, 89]
+
