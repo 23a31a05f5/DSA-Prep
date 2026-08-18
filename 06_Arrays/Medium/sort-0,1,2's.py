@@ -30,6 +30,9 @@ def sortoot(arr,low,high):
     return arr
 arr=[0,2,1,0,2,1]
 print(sortoot(arr,0,len(arr)-1))
+#o/p:[0, 0, 1, 1, 2, 2]
+
+
 
 #better
 #time:O(2n)
@@ -53,3 +56,30 @@ def sortoot(arr):
     return arr
 res=sortoot([2,1,0,2,1,0,2,1])
 print(res)
+#o/p:[0, 0, 1, 1, 1, 2, 2, 2]
+
+#dutch national flag algorithm
+# 0 -low-1->0,low-mid-1->1, mid -high->usorted ,high+1-n-1->2
+def sort_using_dnfa(arr,n):
+    low=0
+    mid=0
+    high=n
+    while mid<=high:
+        if(arr[mid]==0):
+            arr[low],arr[mid]=arr[mid],arr[low]
+            low+=1
+            mid+=1
+
+
+        elif (arr[mid]==1):
+            mid+=1
+
+        else:
+            arr[mid],arr[high]=arr[high],arr[mid]
+            high-=1
+    return arr
+
+
+arr=[2,1,0,2,1,0,2,1,1]
+print(sort_using_dnfa(arr,len(arr)-1))
+#o/p:[0, 0, 1, 1, 1, 1, 2, 2, 2]
