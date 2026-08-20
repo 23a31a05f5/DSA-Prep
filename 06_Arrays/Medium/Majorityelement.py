@@ -52,8 +52,12 @@ def majority_by_mva(arr):
             cnt+=1
         else:
             cnt-=1
-    p=arr.count(el)
+    p=0
+    for i in arr:
+        if i==el:
+            p+=1     #p=arr.count(el)
     if p>n//2:
         return el
 
 print(majority_by_mva([2,2,3,3,3,2,2]))
+#2
