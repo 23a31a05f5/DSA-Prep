@@ -60,3 +60,14 @@ def maximumsubsum(arr):
     return arr[ansstart:ansend+1],max_s
 print(maximumsubsum([-2,-3,4,-1,-2,1,5,-3]))
 #o/p:([4, -1, -2, 1, 5],7)
+
+
+#kandens for negative also
+def maxSubArray(nums) -> int:
+        max_s=nums[0]
+        curr_s=nums[0]
+        for i in range(1,len(nums)):
+            curr_s=max(nums[i], curr_s+nums[i])
+            max_s=max(max_s,curr_s)
+        return max_s
+print(maxSubArray([-2,-3,4,-1,-2,1,5,-3]))
