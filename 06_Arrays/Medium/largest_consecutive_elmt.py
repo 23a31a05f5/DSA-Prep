@@ -37,6 +37,5 @@ def largestconsecutive(arr):
         longest=max(longest,cnt)
   
     return longest
-print(largestconsecutive([102,4,100,1,103,2,3,5]))
-
-#5
+print(largestconsecutive([102,4,100,1,103,2,3]))
+#4
