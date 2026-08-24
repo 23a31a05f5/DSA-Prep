@@ -20,8 +20,8 @@ print(largestconsecutive([102,4,100,1,103,2,3,5]))
 #5
 
 #better
-#time:
-#space:
+#time:o(n+nlogn)
+#space:o(1)
 def largestconsecutive(arr):
     longest=1
     lastsmall=float('inf')
