@@ -39,3 +39,25 @@ def largestconsecutive(arr):
     return longest
 print(largestconsecutive([102,4,100,1,103,2,3]))
 #4
+#optimal
+#time:o(n)
+#space:o(n)
+def longestcons(arr):
+    n=len(arr)
+    if n==0:
+        return 0
+    longest=1
+    st=set()
+    for i in arr:
+        st.add(i)
+    for it in st:
+        if it-1 not in st:
+            cnt=1
+            x=it
+            while x+1 in st:
+                x=x+1
+                cnt+=1
+            longest=max(longest,cnt)
+    return longest
+print(longestcons([102,4,100,1,103,2,3,4]))
+#4
