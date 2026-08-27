@@ -21,12 +21,12 @@ print(findleader([10,22,6,12,0,6]))
 def findleader(arr):
     n=len(arr)
     maxi=arr[-1]
-    res=[maxi]
+    resu=[maxi]
     for i in range(n-1,0,-1):
         if arr[i]>maxi:
-            res.append(arr[i])
+            resu.append(arr[i])
             maxi=arr[i]
-    res.reverse()
-    return res
+    resu.reverse()
+    return resu
 print(findleader([10,22,6,12,0,6]))
 #[22,12,6]
