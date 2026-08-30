@@ -14,5 +14,5 @@ def maximumsubsum(arr):
             ansstart=start
             ansend=i
     return arr[ansstart:ansend+1],max_s
-print(maximumsubsum([-2,-3,4,-1,-2,1,5,-3]))
+print(maximumsubsum([-2,-3,4,-1,-2,1,5]))
 #o/p:([4, -1, -2, 1, 5],7)
