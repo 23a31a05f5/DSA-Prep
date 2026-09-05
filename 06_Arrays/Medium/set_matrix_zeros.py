@@ -24,3 +24,26 @@ def setmat(mat):
 matrix=[[1,1,1],[1,0,1],[1,1,1]]
 print(setmat(matrix))
 #[[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+
+#better
+#time:o(2*(n*m))
+#space:o(n)+o(m)
+def setmatrix(arr):
+    n=len(arr)
+    m=len(arr[0])
+    row=[0]*n
+    col=[0]*m
+    for i in range(n):
+        for j in range(m):
+            if arr[i][j]==0:
+                row[i]=1
+                col[j]=1
+    for i in range(n):
+        for j in range(m):
+            if col[j]==1 or row[i]==1:
+                arr[i][j]=0
+    return arr
+mat=[[1,1,1],[1,0,1],[1,1,1]]
+print(setmatrix(mat))
+
+#o/p:[[1, 0, 1], [0, 0, 0], [1, 0, 1]]
