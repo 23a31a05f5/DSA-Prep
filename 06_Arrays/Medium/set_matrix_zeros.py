@@ -47,3 +47,35 @@ mat=[[1,1,1],[1,0,1],[1,1,1]]
 print(setmatrix(mat))
 
 #o/p:[[1, 0, 1], [0, 0, 0], [1, 0, 1]]
+
+#optimal
+#time:o(2*(n*m))
+#space:o(1)
+def setmatrix(arr):
+    n=len(arr)
+    m=len(arr[0])
+    col=1
+    for i in range(n):
+        for j in range(m):
+            if(arr[i][j]==0):
+                arr[i][0]=0
+                if j!=0:
+                    arr[0][j]=0
+                else:
+                    col=0
+    for i in range(n):
+        for j in range(m):
+            if arr[i][j]!=0:
+                if arr[0][j] ==0 or arr[i][0]==0:
+                    arr[i][j]=0
+
+    if arr[0][0]==0:
+        for j in range(m):
+            arr[0][j]=0
+    if col==0:
+        for i in range(n):
+            arr[i][0]=0          
+    return arr
+mat=[[1,1,1],[1,0,1],[1,1,1]]
+print(setmatrix(mat))
+#[[1, 0, 1], [0, 0, 0], [1, 0, 1]]
